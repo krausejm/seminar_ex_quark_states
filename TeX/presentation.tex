@@ -121,6 +121,29 @@
 \section{Line-shape measurement}
 
 
+\begin{frame}{Reaction kinematics}
+	\begin{figure}[H]
+		\includegraphics[width=.65\linewidth]{kinematics}
+		\caption{Possible and studied reactions in the analysis of the lineshapes of $\Lambda(1405)$, taken from \citet{lineshapes}}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Event selection}
+	Inhalt...
+\end{frame}
+
+\begin{frame}{Measurements and analysis}
+	
+\end{frame}
+
+\begin{frame}{Interpretation of the results}
+	
+\end{frame}
+
+
+
+
+
 \section{Spin-parity measurement}
 \begin{frame}{Theoretical basics}
 	The $\Lambda(1405)$ is so far (mostly) assumed to have $J^P=\frac{1}{2}^-$, but this has not been determined experimentally
@@ -143,32 +166,96 @@
 	
 \end{frame}
 \begin{frame}{Theoretical basics}
-	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Measuring parity] 
-		\begin{itemize}
-			\item the key to accessing the parity lies in determining the Polarization transfer to the decay product $Y$ which we will denote $\mathbf{Q}$
-			\item the angular distribution of $Q$ will only depend on $P$
-			\begin{align*}
+	\begin{minipage}{.59\linewidth}
+			\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Measuring parity] 
+			\begin{itemize}
+				\item the key to accessing the parity lies in determining the Polarization transfer to the decay product $Y$ which we will denote $\mathbf{Q}$
+				\item the angular distribution of $\mathbf{Q}$ will only depend on $\mathbf{P}$
+				\begin{align*}
 				\mathbf{Q}(\theta_Y)&=\text{const.} & J^P=1/2^-\\
-				Q(\theta_Y)&=-P+2(P\cdot q)q & J^P=1/2^+,
-			\end{align*}
-			
-			\item uniform decay pattern is best evidence for spin $J=1/2$
-			
-		\end{itemize}
-	\end{tcolorbox}
+				\mathbf{Q}(\theta_Y)&=-\mathbf{P}+2(\mathbf{P}\cdot \mathbf{q})\mathbf{q} & J^P=1/2^+
+				\end{align*}
+				
+				\item $\mathbf{Q}$ can be measured from weak decay angular distribution of  $Y$ 
+				
+			\end{itemize}
+		\end{tcolorbox}		
+	\end{minipage}
+\begin{minipage}{.4\linewidth}
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=\linewidth]{pol}
+		\caption{Polarization transfer in the strong decay $Y^*\to Y\pi$, taken from [\cite{spinparity}]}
+	\end{figure}
+\end{minipage}
+
 	\begin{flushright}
-		[\cite{spinparity}]
+		[\cite{spinparity} and Ref. therein]
 	\end{flushright}
+\end{frame}
+\begin{frame}{Measurements and analysis}
+	\begin{minipage}{.4\linewidth}
+			\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Event selection] 
+			\begin{itemize}
+				\item select kinematic region where the $\Sigma\pi$ invariant mass is dominated by the $\Lambda(1405)$ $\to M_{\Sigma\pi}\in$ \SIrange{1.30}{1.45}{\giga\eV}
+				\item inspect nine bins in energy and angle, namely with CM energy at $2.6, 2.7$ and $2.8$ GeV and the  three forwardmost kaon angle bins each
+			\end{itemize}
+		\end{tcolorbox}	
+\end{minipage}
+\begin{minipage}{.57\linewidth}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{events_pol}
+		\caption{$\Sigma\pi$  and $K\pi$ invariant mass in the vicinity of the $\Lambda(1405)$, taken from \citet{spinparity}}
+	\end{figure}
+\end{minipage}
+\end{frame}
+\begin{frame}{Measurements and analysis}
+	\begin{minipage}{\linewidth}
+	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Analysis procedure] 
+		\begin{itemize}
+			\item plot the angular distribution of the projections  $\cos\theta_\Sigma$ and $\cos\theta_p$ for each bin
+			\item test each spin hypothesis using \textsc{Monte-Carlo} maximum likelihood fits, which employ angular decay probability distributions according to each hypothesis for $\Sigma\pi$ and $p\pi$. From the fit $Q_z$ will be determined
+			\item test parity hypotheses by determining $Q_z(\cos\theta_\Sigma)$
+			\item compare each hypothesis by calculating a $\chi^2$ probability
+		\end{itemize}
+	\end{tcolorbox}	
+Result: data is consistent with $J^P=1/2^-$ but does in principle not rule out $J^P=3/2^+$. $1/2^+$ and $3/2^-$ can be discarded.
+\end{minipage}
+
+\end{frame}
+\begin{frame}{Measurements and analysis}
+		\begin{figure}
+			\centering
+			\includegraphics[width=.5\linewidth]{angular_dist}
+			\caption{Distributions of the projections of (a)$\cos\theta_\Sigma$ and (b) $\cos\theta_p$ @ $2.65<W<\SI{2.75}{\giga\eV}$ and $0.70<\cos\theta<0.80$, taken from \citet{spinparity}}
+		\end{figure}
+
+\end{frame}
+\begin{frame}{Measurements and analysis}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{angular_pol}
+		\caption{angular distribution of the polarization $Q_z$ @ $2.65<W<\SI{2.75}{\giga\eV}$ and $0.70<\cos\theta<0.80$. Red: average, blue: expectation for $P$-wave decay. Taken from \citet{spinparity}}
+	\end{figure}
 	
 \end{frame}
 
+
+
+
 \section{Conclusion}
+\begin{frame}{Conclusion}
+	
+\end{frame}
 
 
 
 
 
-
+\begin{frame}{References}
+	\printbibliography
+\end{frame}
 
 
 \end{document}
