@@ -122,18 +122,106 @@
 
 
 \begin{frame}{Reaction kinematics}
-	\begin{figure}[H]
-		\includegraphics[width=.65\linewidth]{kinematics}
-		\caption{Possible and studied reactions in the analysis of the lineshapes of $\Lambda(1405)$, taken from \citet{lineshapes}}
-	\end{figure}
+	\begin{minipage}{.65\linewidth}
+		\begin{figure}[H]
+			\includegraphics[width=\linewidth]{kinematics}
+			\caption{Possible and studied reactions in the analysis of the lineshapes of $\Lambda(1405)$, taken from \citet{lineshapes}}
+		\end{figure}	
+	\end{minipage}
+	\begin{minipage}{.34\linewidth}
+		\begin{align*}
+			\Sigma^+\to &p \pi^0\\
+			\Sigma^+\to &n \pi^+\\
+			\Sigma^0\to &\gamma\Lambda&\to\gamma p \pi^-\\
+			\Sigma^-\to &n \pi^-\\
+			\Lambda\to &p \pi^-\\
+		\end{align*}
+	\end{minipage}
+	
 \end{frame}
 
 \begin{frame}{Event selection}
-	Inhalt...
+	There are two sets of reactions that the detector sees
+	
+	\begin{enumerate}
+		\item $K^+p\pi^-$
+		\item $K^+\pi^+\pi^-$
+	\end{enumerate}
+There are many cuts that can be made that apply to both
+	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Initial selection of particles] 
+		\begin{itemize}
+			\item Initial final state Kaon selection
+			\item fiducial cuts
+			\item remove false $K^+$ due to $\pi^+$ or $p$
+			\item Loose $\Delta\text{TOF}$ cut ($\Delta\text{TOF}=t_\text{meas}-t_\text{calc}=t_\text{meas}-\frac{l\sqrt{p^2+m_0^2}}{cp}$)
+			\item vertex $z$ cut
+			\item minimum $|\mathbf{p}|$ cuts
+			\item Precise $\Delta\text{TOF}$ cuts
+			
+		\end{itemize}
+	\end{tcolorbox}
+\end{frame}
+\begin{frame}{Event selection}
+In all channels, the data was divided into 10 bins of energy spanning \SI{100}{\mega\eV} in the CMS energy $W=\sqrt{s}$ and 20 angle bins in the CMS kaon angle.
+
+$\to$ the following analysis was performed independently in every bin of energy and angle!
+\end{frame}
+\begin{frame}{Event selection}
+	\centering
+	\begin{minipage}{.49\linewidth}
+		\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=extracting $\Lambda\pi^0$ and $\Sigma^+\pi^-$] 
+		- reminder: $\Lambda\to p\pi^-, \Sigma^+\to p\pi^0$\\	
+		- final state particles: $K^+p\pi^-(\pi^0)$ 
+		- determine $p_\pi$ via missing mass fit\\
+		- apply cuts based on fits to the invariant masses $M_{p\pi^-}$ and $M_{p\pi^0}$	
+			
+			
+	\end{tcolorbox}	
+\end{minipage}
+\begin{minipage}{.49\linewidth}
+	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=extracting $\Sigma^+\pi^-$ and $\Sigma^-\pi^+$] 
+	- reminder: $\Sigma^\pm\to n\pi^\pm$\\
+	- final state particles: $K^+\pi^+\pi^-(n)$\\
+	- determine $p_n$ via missing mass fit\\
+	- apply cuts based on fits to the invariant masses $M_{n\pi^\pm}$
+	\end{tcolorbox}	
+\end{minipage}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.49\linewidth]{inv_mass_1.jpg}
+	\includegraphics[width=.49\linewidth]{inv_mass_2.jpg}
+	\caption{\textsc{Dalitz}-like plots of the above mentioned invariant masses, taken from \citet{lineshapes}}
+\end{figure}
 \end{frame}
 
+\begin{frame}{Event selection}
+	\begin{minipage}{\linewidth}
+		\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=extracting $\Sigma^0\pi^0$] 
+			- reminder: $\Sigma^0\to\gamma\Lambda\to\gamma p \pi^-$\\
+			- final state particles: $K^+ p \pi^-(\gamma\pi^0)$
+			- missing mass fit is not applicable here: \phantom{- }demand the missing mass is sufficiently greater than $m_\pi$\\
+			- make cuts based on the invariant mass $M_{p\pi^-}$\\
+			- now the missing mass ($\gamma p\to K^+ X$) gives the $\Sigma^0\pi^0$ lineshape
+		\end{tcolorbox}	
+	\end{minipage}
+\begin{figure}
+	\centering
+	\includegraphics[width=.5\linewidth]{mism.jpg}
+	\caption{Invariant mass of the $\gamma\pi$ system, selection range in magenta. Taken from \citet{lineshapes}}
+\end{figure}
+\end{frame}
+
+
+
+
 \begin{frame}{Measurements and analysis}
-	
+	\begin{itemize}
+		\item Now the signal regions have been established
+		\item he true lineshape of the $\Lambda(1405)$ has to be extracted from the vast of reactions $\to$ any other contributions have to be excluded
+		\item Strategy: use of \textsc{Monte-Carlo} fits to the data, simulating the contribution of other resonances
+		
+	\end{itemize}
+\color{red} I will not really go into detail here...(??)
 \end{frame}
 
 \begin{frame}{Interpretation of the results}
@@ -205,8 +293,8 @@
 \begin{minipage}{.57\linewidth}
 	\begin{figure}
 		\centering
-		\includegraphics[width=\linewidth]{events_pol}
-		\caption{$\Sigma\pi$  and $K\pi$ invariant mass in the vicinity of the $\Lambda(1405)$, taken from \citet{spinparity}}
+		\includegraphics[width=.95\linewidth]{events_pol}
+		\caption{$\Sigma\pi$  and $K\pi$ invariant mass in the vicinity of the $\Lambda(1405)$, taken from [\cite{spinparity}]}
 	\end{figure}
 \end{minipage}
 \end{frame}
