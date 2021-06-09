@@ -5,7 +5,12 @@
 \usepackage{animate}
 \usepackage{lastpage}
 \usepackage{tikz}
+\usepackage{braket}
 \usepackage{lmodern}
+
+\usepackage{draftwatermark}
+\setbeamercolor{background canvas}{bg=}%transparent canvas
+
 \setbeamercolor{section in toc}{fg=NavyBlue}
 \setbeamercolor{frametitle}{fg=NavyBlue}
 \captionsetup[figure]{labelfont=bf}
@@ -109,6 +114,19 @@
 		\caption{CEBAF layout at Jefferson Lab, [\cite{clas}]}
 	\end{figure}
 \end{frame}
+
+\begin{frame}{Continuous Electron Beam Accelerator Facility (CEBAF)}
+		\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=How can we access $\Lambda(1405)$ with this setup?]
+			\begin{itemize}
+				\item employ radiator target for the electrons
+				\item generate high energy photons using the \emph{bremsstrahlung} process
+				\item shoot high energy photons on proton target (LH2)
+				\item then we can observe $\gamma p \to K^+\Lambda(1405)$ while knowing $p_\gamma,p_p$
+			\end{itemize} 
+			
+		\end{tcolorbox}
+\end{frame}
+
 \begin{frame}{CEBAF Large Acceptance Spectrometer (CLAS)}
 	\begin{figure}
 		\centering
@@ -122,7 +140,7 @@
 
 
 \begin{frame}{Reaction kinematics}
-	\begin{minipage}{.65\linewidth}
+	\begin{minipage}{.63\linewidth}
 		\begin{figure}[H]
 			\includegraphics[width=\linewidth]{kinematics}
 			\caption{Possible and studied reactions in the analysis of the lineshapes of $\Lambda(1405)$, taken from \citet{lineshapes}}
@@ -161,6 +179,14 @@ There are many cuts that can be made that apply to both
 		\end{itemize}
 	\end{tcolorbox}
 \end{frame}
+\begin{frame}{Event selection}
+\begin{figure}
+	\centering
+	\includegraphics[width=.55\linewidth]{tof}
+	\caption{$\Delta$TOF for $\pi^\pm$ @ $2.35 < W < \SI{2.45}{\giga\eV}$, applied cuts are shown in magenta. \citet{lineshapes}}
+\end{figure}
+\end{frame}
+
 \begin{frame}{Event selection}
 In all channels, the data was divided into 10 bins of energy spanning \SI{100}{\mega\eV} in the CMS energy $W=\sqrt{s}$ and 20 angle bins in the CMS kaon angle.
 
@@ -218,13 +244,74 @@ $\to$ the following analysis was performed independently in every bin of energy 
 	\begin{itemize}
 		\item Now the signal regions have been established
 		\item he true lineshape of the $\Lambda(1405)$ has to be extracted from the vast of reactions $\to$ any other contributions have to be excluded
-		\item Strategy: use of \textsc{Monte-Carlo} fits to the data, simulating the contribution of other resonances
+		\item Strategy: use of \textsc{Monte-Carlo} fits to the data, simulating the contribution of other resonances using the PDG widths and masses
 		
 	\end{itemize}
 \color{red} I will not really go into detail here...(??)
 \end{frame}
 
+\begin{frame}{Measurements and analysis}
+Some fit results:
+\begin{figure}
+	\centering
+	\includegraphics[width=.49\linewidth]{inv_mass_res1.jpg}
+	\includegraphics[width=.49\linewidth]{inv_mass_res2.jpg}
+	\caption{ Sample fit results of invariant mass spectra for a single bin in energy and angle, taken from \citet{lineshapes}}
+	
+\end{figure}
+\end{frame}
+
 \begin{frame}{Interpretation of the results}
+	Having substracted all unwanted reactions, one can obtain the true $\Lambda(1405)$ lineshapes:
+	\begin{figure}
+		\centering
+		\includegraphics[width=.4\linewidth,angle=270]{result}
+		\caption{Lineshapes of the $\Lambda(1405)$ for the 3 different decay channels and the PDG \textsc{Breit-Wigner}. The data were summed over all angles for better statistics. \citet{lineshapes}}
+	\end{figure}
+\end{frame}
+\begin{frame}{Interpretation of the results}
+ There are in fact predictions of the lineshapes differing by decay channel \citet{nacher}. \\$\to$ main idea: not one amplitude, but two due to isospin decomposition.
+	\begin{figure}
+		\centering
+		\includegraphics[width=.58\linewidth]{nacher}
+		\caption{Lineshapes of the $\Lambda(1405)$ for the 3 different decay channels and the prediction of \citet{nacher}, taken from \citet{lineshapes}}
+	\end{figure}
+\end{frame}
+\begin{frame}{Interpretation of the results}
+	\textsc{Moriya et al.} saw two main reasons for the lineshapes differing from a simple \textsc{Breit-Wigner}:
+	\begin{enumerate}
+		\item Isospin decomposition
+		\item channel coupling between the detected $\Sigma\pi$ and $N\overline{K}$ final states
+	\end{enumerate}
+\begin{minipage}{.54\linewidth}
+	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Isospin decomposition] 
+		let $$|t_I|^2=|\braket{I,0|T^{(I)}|\gamma p}|^2,$$
+		then we can write (neglecting $I=2$ using CGK)
+		\vspace{-0.5cm}
+		\begin{align*}
+			|T_{\pi^-\Sigma^+}|^2&=\frac{1}{3}|t_0|^2+\frac{1}{2}|t_1|^2-\frac{2}{\sqrt{6}}\cos\phi_{01}\\
+			|T_{\pi^0\Sigma^0}|^2&=\frac{1}{3}|t_0|^2\\
+			|T_{\pi^+\Sigma^-}|^2&=\frac{1}{3}|t_0|^2+\frac{1}{2}|t_1|^2+\frac{2}{\sqrt{6}}\cos\phi_{01}
+		\end{align*}
+	\end{tcolorbox}
+\end{minipage}
+\begin{minipage}{.45\linewidth}
+	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Channel coupling]
+		the $t_I$ are described by one or two \textsc{Breit-Wigner} amplitudes with mass dependent widths $\Gamma$ \\
+		$\to$ modify the amplitude preserving analyticity \citet{flatte} including the $N\overline{K}$ decay channel available at threshold\\ $m_K+m_p\approx\SI{1434}{\mega\eV}$
+		\vspace{.5cm}
+	\end{tcolorbox}
+\end{minipage}
+
+\end{frame}
+\begin{frame}{Interpretation of results}
+	Fits with two $I=1$ and one $I=0$ amplitudes lead to best agreement with measured data {\color{red} also show $\Sigma^-\pi^+,\Sigma^0\pi^0$?}
+	\begin{figure}
+		\centering
+		\includegraphics[width=.65\linewidth]{iso_result.jpg}
+		\caption{Data and fits for $\Sigma^+\pi^-$ for different bins in $W$. $I=0$ (solid black), narrow $I=1$ (dotted black) and wide $I=1$ (dashed black). Background in dashed red. \citet{lineshapes}}
+	\end{figure}
+	
 	
 \end{frame}
 
@@ -334,7 +421,27 @@ Result: data is consistent with $J^P=1/2^-$ but does in principle not rule out $
 
 \section{Conclusion}
 \begin{frame}{Conclusion}
-	
+\begin{minipage}{.49\linewidth}
+	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Lineshape measurement] 
+	\begin{itemize}
+		\item the CLAS detector was used to study $\gamma p \to K^+\Lambda(1405)$
+		\item after selecting the correct events the true lineshape was extracted using \textsc{Monte-Carlo} sim. of the yield of other resonances
+		\item the lineshapes in different decay channels differ from each other and from a simple \textsc{Breit-Wigner}
+		\item a phenomenological isospin decomposition model was able to describe the data
+	\end{itemize}
+
+\end{tcolorbox}
+\end{minipage}
+\begin{minipage}{.49\linewidth}
+	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Spin parity measurement] 
+		\begin{itemize}
+			\item the angular distribution of the decay $\Lambda(1405)\to\Sigma^+\pi^-$ was studied
+			\item the angular distributions were tested against various $J^P$ hypotheses
+			\item the data is consistent with $J^P=1/2^-$ but does not exclude $J^P=3/2^+$
+		\end{itemize}
+		
+	\end{tcolorbox}
+\end{minipage}	
 \end{frame}
 
 
