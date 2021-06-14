@@ -18,7 +18,7 @@
 \setbeamertemplate{caption}[numbered]
 \title[$\Lambda(1405)$]{Experimental studies of the $\Lambda(1405)$}
 \subtitle[Seminar physics654]{physics654 -- Seminar on exotic multi-quark states}
-
+\graphicspath{{figs/}}
 \begin{document}
 \definecolor{myWhite}{rgb}{1,1,1}
 
@@ -81,16 +81,16 @@
 \begin{minipage}{\linewidth}
 		\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=What is special about the $\Lambda(1405)$?] 
 			\begin{itemize}
-				\item its mass does not fit well into constituent quark models which do predict baryon masses well for other baryons 
-				\item invariant mass distribution (line shape) differs significantly from usual \textsc{Breit-Wigner} shapes
-				\item candidate for an exotic multiquark state (bound system of $\overline{K}N$) since its mass lies just below threshold
+				\item mass does not fit well into constituent quark models 
+				\item invariant mass distribution (line shape) differs significantly from usual \textsc{Breit-Wigner} shape
+				\item candidate for an exotic multiquark state (bound system of $\overline{K}N$) since its mass lies just below production threshold
 			
  			\end{itemize}
  		\vspace{.5cm}
- 		There are (very) many different theoretical approaches to explain this behavior\\
+ 		There are  many different theoretical approaches to explain this behavior\\
  		$\to$ There is need for more experimental data!
 		\end{tcolorbox}
-	{\color{red} some plots/pictures?}
+
 \end{minipage}
 
 
@@ -110,28 +110,26 @@
 \begin{frame}{Continuous Electron Beam Accelerator Facility (CEBAF)}
 	\begin{figure}
 		\centering
-		\includegraphics[width=\linewidth]{setup_big.jpg}
-		\caption{CEBAF layout at Jefferson Lab, [\cite{clas}]}
+		\includegraphics[width=.8\linewidth]{cebaf}
+		\caption*{CEBAF layout at Jefferson Lab, [\cite{clas}]}
 	\end{figure}
 \end{frame}
 
+
 \begin{frame}{Continuous Electron Beam Accelerator Facility (CEBAF)}
-		\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=How can we access $\Lambda(1405)$ with this setup?]
-			\begin{itemize}
-				\item employ radiator target for the electrons
-				\item generate high energy photons using the \emph{bremsstrahlung} process
-				\item shoot high energy photons on proton target (LH2)
-				\item then we can observe $\gamma p \to K^+\Lambda(1405)$ while knowing $p_\gamma,p_p$
-			\end{itemize} 
-			
-		\end{tcolorbox}
+	\begin{figure}
+			\centering
+			\includegraphics[width=\linewidth]{figs/tagger.png}
+			\caption{Overview of the CLAS detector setup, including the tagger, \citet{clas}}
+	\end{figure}
 \end{frame}
+
 
 \begin{frame}{CEBAF Large Acceptance Spectrometer (CLAS)}
 	\begin{figure}
 		\centering
-		\includegraphics[width=.7\linewidth]{setup.jpg}
-		\caption{CLAS layout at Jefferson Lab, [\cite{clas}]}
+		\includegraphics[width=.5\linewidth]{clas}
+		\caption*{CLAS layout at Jefferson Lab, [\cite{clas}]}
 	\end{figure}
 \end{frame}
 
@@ -143,7 +141,7 @@
 	\begin{minipage}{.63\linewidth}
 		\begin{figure}[H]
 			\includegraphics[width=\linewidth]{kinematics}
-			\caption{Possible and studied reactions in the analysis of the lineshapes of $\Lambda(1405)$, taken from \citet{lineshapes}}
+			\caption*{Possible and studied reactions in the analysis of the lineshapes of $\Lambda(1405)$,  \citet{lineshapes}}
 		\end{figure}	
 	\end{minipage}
 	\begin{minipage}{.34\linewidth}
@@ -159,22 +157,17 @@
 \end{frame}
 
 \begin{frame}{Event selection}
-	There are two sets of reactions that the detector sees
+two sets of reactions that the detector sees
 	
 	\begin{enumerate}
-		\item $K^+p\pi^-$
-		\item $K^+\pi^+\pi^-$
+		\item $K^+p\pi^-(X)$
+		\item $K^+\pi^+\pi^-(X)$
 	\end{enumerate}
 There are many cuts that can be made that apply to both
 	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Initial selection of particles] 
 		\begin{itemize}
-			\item Initial final state Kaon selection
-			\item fiducial cuts
-			\item remove false $K^+$ due to $\pi^+$ or $p$
-			\item Loose $\Delta\text{TOF}$ cut ($\Delta\text{TOF}=t_\text{meas}-t_\text{calc}=t_\text{meas}-\frac{l\sqrt{p^2+m_0^2}}{cp}$)
-			\item vertex $z$ cut
-			\item minimum $|\mathbf{p}|$ cuts
-			\item Precise $\Delta\text{TOF}$ cuts
+			\item particle identification using TOF counters and momentum measurements
+			\item kinematic cuts from \textsc{Monte Carlo}
 			
 		\end{itemize}
 	\end{tcolorbox}
@@ -182,13 +175,13 @@ There are many cuts that can be made that apply to both
 \begin{frame}{Event selection}
 \begin{figure}
 	\centering
-	\includegraphics[width=.55\linewidth]{tof}
-	\caption{$\Delta$TOF for $\pi^\pm$ @ $2.35 < W < \SI{2.45}{\giga\eV}$, applied cuts are shown in magenta. \citet{lineshapes}}
+	\includegraphics[width=\linewidth]{tof_pi}
+	\caption*{$\Delta$TOF for $\pi^+$ @ $2.35 < W < \SI{2.45}{\giga\eV}$, applied cuts are shown in magenta. \citet{lineshapes}}
 \end{figure}
 \end{frame}
 
 \begin{frame}{Event selection}
-In all channels, the data was divided into 10 bins of energy spanning \SI{100}{\mega\eV} in the CMS energy $W=\sqrt{s}$ and 20 angle bins in the CMS kaon angle.
+	data was divided into 10  \SI{100}{\mega\eV} in the CMS energy $W=\sqrt{s}\in[2,3]\si{\giga\eV}$ and 20 angle bins of $0.1$ in $\cos\theta^\text{CMS}_K$.
 
 $\to$ the following analysis was performed independently in every bin of energy and angle!
 \end{frame}
@@ -214,9 +207,9 @@ $\to$ the following analysis was performed independently in every bin of energy 
 \end{minipage}
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=.49\linewidth]{inv_mass_1.jpg}
-	\includegraphics[width=.49\linewidth]{inv_mass_2.jpg}
-	\caption{\textsc{Dalitz}-like plots of the above mentioned invariant masses, taken from \citet{lineshapes}}
+	\includegraphics[width=.49\linewidth]{inv_mass_1}
+	\includegraphics[width=.49\linewidth]{inv_mass_2}
+	\caption*{\textsc{Dalitz}-like plots of the above mentioned invariant masses,  \citet{lineshapes}}
 \end{figure}
 \end{frame}
 
@@ -232,8 +225,8 @@ $\to$ the following analysis was performed independently in every bin of energy 
 	\end{minipage}
 \begin{figure}
 	\centering
-	\includegraphics[width=.5\linewidth]{mism.jpg}
-	\caption{Invariant mass of the $\gamma\pi$ system, selection range in magenta. Taken from \citet{lineshapes}}
+	\includegraphics[width=.5\linewidth]{mism}
+	\caption*{Missing  mass of the reaction $\gamma p \to K^+p\pi^-(X)$, selection range in magenta.  \citet{lineshapes}}
 \end{figure}
 \end{frame}
 
@@ -243,20 +236,19 @@ $\to$ the following analysis was performed independently in every bin of energy 
 \begin{frame}{Measurements and analysis}
 	\begin{itemize}
 		\item Now the signal regions have been established
-		\item he true lineshape of the $\Lambda(1405)$ has to be extracted from the vast of reactions $\to$ any other contributions have to be excluded
+		\item The true lineshape of the $\Lambda(1405)$ has to be extracted from the vast of reactions $\to$ any other contributions have to be substracted
 		\item Strategy: use of \textsc{Monte-Carlo} fits to the data, simulating the contribution of other resonances using the PDG widths and masses
 		
 	\end{itemize}
-\color{red} I will not really go into detail here...(??)
 \end{frame}
 
 \begin{frame}{Measurements and analysis}
 Some fit results:
 \begin{figure}
 	\centering
-	\includegraphics[width=.49\linewidth]{inv_mass_res1.jpg}
-	\includegraphics[width=.49\linewidth]{inv_mass_res2.jpg}
-	\caption{ Sample fit results of invariant mass spectra for a single bin in energy and angle, taken from \citet{lineshapes}}
+	\includegraphics[width=.49\linewidth]{inv_mass_res1}
+	\includegraphics[width=.49\linewidth]{inv_mass_res2}
+	\caption*{ Sample fit results of invariant mass spectra for a single bin in energy and angle,  \citet{lineshapes}}
 	
 \end{figure}
 \end{frame}
@@ -265,8 +257,8 @@ Some fit results:
 	Having substracted all unwanted reactions, one can obtain the true $\Lambda(1405)$ lineshapes:
 	\begin{figure}
 		\centering
-		\includegraphics[width=.4\linewidth,angle=270]{result}
-		\caption{Lineshapes of the $\Lambda(1405)$ for the 3 different decay channels and the PDG \textsc{Breit-Wigner}. The data were summed over all angles for better statistics. \citet{lineshapes}}
+		\includegraphics[width=\linewidth,angle=0]{CLAS_lineshape_compare}
+		\caption*{Lineshapes of the $\Lambda(1405)$ for the 3 different decay channels and the PDG \textsc{Breit-Wigner}. The data were summed over all angles for better statistics. \citet{lineshapes}}
 	\end{figure}
 \end{frame}
 \begin{frame}{Interpretation of the results}
@@ -274,7 +266,7 @@ Some fit results:
 	\begin{figure}
 		\centering
 		\includegraphics[width=.58\linewidth]{nacher}
-		\caption{Lineshapes of the $\Lambda(1405)$ for the 3 different decay channels and the prediction of \citet{nacher}, taken from \citet{lineshapes}}
+		\caption*{Lineshapes of the $\Lambda(1405)$ for the 3 different decay channels and the prediction of \citet{nacher},  \citet{lineshapes}}
 	\end{figure}
 \end{frame}
 \begin{frame}{Interpretation of the results}
@@ -283,33 +275,33 @@ Some fit results:
 		\item Isospin decomposition
 		\item channel coupling between the detected $\Sigma\pi$ and $N\overline{K}$ final states
 	\end{enumerate}
-\begin{minipage}{.54\linewidth}
+\begin{minipage}{.56\linewidth}
 	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Isospin decomposition] 
 		let $$|t_I|^2=|\braket{I,0|T^{(I)}|\gamma p}|^2,$$
 		then we can write (neglecting $I=2$ using CGK)
 		\vspace{-0.5cm}
 		\begin{align*}
-			|T_{\pi^-\Sigma^+}|^2&=\frac{1}{3}|t_0|^2+\frac{1}{2}|t_1|^2-\frac{2}{\sqrt{6}}\cos\phi_{01}\\
+			|T_{\pi^-\Sigma^+}|^2&=\frac{1}{3}|t_0|^2+\frac{1}{2}|t_1|^2-\frac{2}{\sqrt{6}}t_0t_1\cos\phi_{01}\\
 			|T_{\pi^0\Sigma^0}|^2&=\frac{1}{3}|t_0|^2\\
-			|T_{\pi^+\Sigma^-}|^2&=\frac{1}{3}|t_0|^2+\frac{1}{2}|t_1|^2+\frac{2}{\sqrt{6}}\cos\phi_{01}
+			|T_{\pi^+\Sigma^-}|^2&=\frac{1}{3}|t_0|^2+\frac{1}{2}|t_1|^2+\frac{2}{\sqrt{6}}t_0t_1\cos\phi_{01}
 		\end{align*}
 	\end{tcolorbox}
 \end{minipage}
-\begin{minipage}{.45\linewidth}
+\begin{minipage}{.43\linewidth}
 	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Channel coupling]
 		the $t_I$ are described by one or two \textsc{Breit-Wigner} amplitudes with mass dependent widths $\Gamma$ \\
 		$\to$ modify the amplitude preserving analyticity \citet{flatte} including the $N\overline{K}$ decay channel available at threshold\\ $m_K+m_p\approx\SI{1434}{\mega\eV}$
-		\vspace{.5cm}
+
 	\end{tcolorbox}
 \end{minipage}
 
 \end{frame}
 \begin{frame}{Interpretation of results}
-	Fits with two $I=1$ and one $I=0$ amplitudes lead to best agreement with measured data {\color{red} also show $\Sigma^-\pi^+,\Sigma^0\pi^0$?}
+	Fits with two $I=1$ and one $I=0$ amplitudes lead to best agreement with measured data 
 	\begin{figure}
 		\centering
-		\includegraphics[width=.65\linewidth]{iso_result.jpg}
-		\caption{Data and fits for $\Sigma^+\pi^-$ for different bins in $W$. $I=0$ (solid black), narrow $I=1$ (dotted black) and wide $I=1$ (dashed black). Background in dashed red. \citet{lineshapes}}
+		\includegraphics[width=.57\linewidth]{CLAS_lineshape_all}
+		\caption*{Data and fits for $\Sigma^a\pi^b, \{a,b\}\in\{+-,00-+\}$  for different bins in $W$. $I=0$ (solid black), narrow $I=1$ (dotted black) and wide $I=1$ (dashed black). Background in dashed red. \citet{lineshapes}}
 	\end{figure}
 	
 	
@@ -320,7 +312,7 @@ Some fit results:
 
 
 \section{Spin-parity measurement}
-\begin{frame}{Theoretical basics}
+\begin{frame}{Theoretical basics I}
 	The $\Lambda(1405)$ is so far (mostly) assumed to have $J^P=\frac{1}{2}^-$, but this has not been determined experimentally
 	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Measuring spin] 
 		\begin{itemize}
@@ -340,9 +332,31 @@ Some fit results:
 	\end{flushright}
 	
 \end{frame}
-\begin{frame}{Theoretical basics}
+
+
+\begin{frame}{Measurements and analysis I }
+	\begin{minipage}{\linewidth}
+	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Analysis procedure] 
+		\begin{itemize}
+			\item plot the angular distribution of the projections  $\cos\theta_\Sigma$ for each bin
+			\item test each spin hypothesis using \textsc{Monte-Carlo} maximum likelihood fits, which employ angular decay probability distributions according to each hypothesis for $\Sigma\pi$ 
+			\item compare each hypothesis by calculating a $\chi^2$ probability
+		\end{itemize}
+	\end{tcolorbox}	
+
+\end{minipage}
+\end{frame}
+\begin{frame}{Meausrements and analysis I}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{spin_half}
+		\caption{Distribution of decay angle of the $\sigma^+$ with \textsc{Monte-Carlo} fit using flat templates \citet{spinparity}}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Theoretical basics II}
 	\begin{minipage}{.59\linewidth}
-			\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Measuring parity] 
+		\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Measuring parity] 
 			\begin{itemize}
 				\item the key to accessing the parity lies in determining the Polarization transfer to the decay product $Y$ which we will denote $\mathbf{Q}$
 				\item the angular distribution of $\mathbf{Q}$ will only depend on $\mathbf{P}$
@@ -356,62 +370,43 @@ Some fit results:
 			\end{itemize}
 		\end{tcolorbox}		
 	\end{minipage}
-\begin{minipage}{.4\linewidth}
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=\linewidth]{pol}
-		\caption{Polarization transfer in the strong decay $Y^*\to Y\pi$, taken from [\cite{spinparity}]}
-	\end{figure}
-\end{minipage}
-
+	\begin{minipage}{.4\linewidth}
+		\begin{figure}[H]
+			\centering
+			\includegraphics[width=\linewidth]{pol}
+			\caption*{Polarization transfer in the strong decay $Y^*\to Y\pi$,  [\cite{spinparity}]}
+		\end{figure}
+	\end{minipage}
+	
 	\begin{flushright}
 		[\cite{spinparity} and Ref. therein]
 	\end{flushright}
 \end{frame}
-\begin{frame}{Measurements and analysis}
-	\begin{minipage}{.4\linewidth}
-			\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Event selection] 
-			\begin{itemize}
-				\item select kinematic region where the $\Sigma\pi$ invariant mass is dominated by the $\Lambda(1405)$ $\to M_{\Sigma\pi}\in$ \SIrange{1.30}{1.45}{\giga\eV}
-				\item inspect nine bins in energy and angle, namely with CM energy at $2.6, 2.7$ and $2.8$ GeV and the  three forwardmost kaon angle bins each
-			\end{itemize}
-		\end{tcolorbox}	
-\end{minipage}
-\begin{minipage}{.57\linewidth}
-	\begin{figure}
-		\centering
-		\includegraphics[width=.95\linewidth]{events_pol}
-		\caption{$\Sigma\pi$  and $K\pi$ invariant mass in the vicinity of the $\Lambda(1405)$, taken from [\cite{spinparity}]}
-	\end{figure}
-\end{minipage}
-\end{frame}
-\begin{frame}{Measurements and analysis}
-	\begin{minipage}{\linewidth}
-	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Analysis procedure] 
+
+\begin{frame}{Measurements and analysis II}
+		\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Analysis procedure] 
 		\begin{itemize}
-			\item plot the angular distribution of the projections  $\cos\theta_\Sigma$ and $\cos\theta_p$ for each bin
-			\item test each spin hypothesis using \textsc{Monte-Carlo} maximum likelihood fits, which employ angular decay probability distributions according to each hypothesis for $\Sigma\pi$ and $p\pi$. From the fit $Q_z$ will be determined
-			\item test parity hypotheses by determining $Q_z(\cos\theta_\Sigma)$
-			\item compare each hypothesis by calculating a $\chi^2$ probability
+			\item plot the angular distribution of the projections  $\cos\theta_p$ for each bin
+			\item determine the polarization using \textsc{Monte-Carlo} fits
+			\item determine $Q_z(\cos\theta_{\Sigma^+})$ to get the parity (const. for $P=-$ quadratic for $P=+$)
 		\end{itemize}
 	\end{tcolorbox}	
-Result: data is consistent with $J^P=1/2^-$ but does in principle not rule out $J^P=3/2^+$. $1/2^+$ and $3/2^-$ can be discarded.
-\end{minipage}
-
+Result: data is consistent with $J^P=1/2^-$ but does in principle not rule out $J^P=3/2^+$. $1/2^+$ and $3/2^-$ hypotheses can be discarded.
 \end{frame}
-\begin{frame}{Measurements and analysis}
+
+\begin{frame}{Measurements and analysis II}
 		\begin{figure}
 			\centering
 			\includegraphics[width=.5\linewidth]{angular_dist}
-			\caption{Distributions of the projections of (a)$\cos\theta_\Sigma$ and (b) $\cos\theta_p$ @ $2.65<W<\SI{2.75}{\giga\eV}$ and $0.70<\cos\theta<0.80$, taken from \citet{spinparity}}
+			\caption*{Distributions of the projections of (a)$\cos\theta_\Sigma$ and (b) $\cos\theta_p$ @ $2.65<W<\SI{2.75}{\giga\eV}$ and $0.70<\cos\theta<0.80$,  \citet{spinparity}}
 		\end{figure}
 
 \end{frame}
-\begin{frame}{Measurements and analysis}
+\begin{frame}{Measurements and analysis II}
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{angular_pol}
-		\caption{angular distribution of the polarization $Q_z$ @ $2.65<W<\SI{2.75}{\giga\eV}$ and $0.70<\cos\theta<0.80$. Red: average, blue: expectation for $P$-wave decay. Taken from \citet{spinparity}}
+		\caption*{angular distribution of the polarization $Q_z$ @ $2.65<W<\SI{2.75}{\giga\eV}$ and $0.70<\cos\theta<0.80$. Red: average, blue: expectation for $P$-wave decay.  \citet{spinparity}}
 	\end{figure}
 	
 \end{frame}
@@ -444,8 +439,34 @@ Result: data is consistent with $J^P=1/2^-$ but does in principle not rule out $
 \end{minipage}	
 \end{frame}
 
-
-
+\begin{frame}{Back-up: Continuous Electron Beam Accelerator Facility (CEBAF)}
+	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=How can we access $\Lambda(1405)$ with this setup?]
+		\begin{itemize}
+			\item employ radiator target for the electrons
+			\item generate high energy photons using the \emph{bremsstrahlung} process
+			\item shoot high energy photons on proton target (LH2)
+			\item then we can observe $\gamma p \to K^+\Lambda(1405)$ while knowing $p_\gamma,p_p$
+		\end{itemize} 
+		
+	\end{tcolorbox}
+\end{frame}
+\begin{frame}{Back-up: Spin-Parity -- Measurements and analysis}
+	\begin{minipage}{.4\linewidth}
+		\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Event selection] 
+			\begin{itemize}
+				\item select kinematic region where the $\Sigma\pi$ invariant mass is dominated by the $\Lambda(1405)$ $\to M_{\Sigma\pi}\in$ \SIrange{1.30}{1.45}{\giga\eV}
+				\item inspect nine bins in energy and angle, namely with CM energy at $2.6, 2.7$ and $2.8$ GeV and the  three forwardmost kaon angle bins each
+			\end{itemize}
+		\end{tcolorbox}	
+	\end{minipage}
+	\begin{minipage}{.57\linewidth}
+		\begin{figure}
+			\centering
+			\includegraphics[width=.95\linewidth]{events_pol}
+			\caption*{$\Sigma\pi$  and $K\pi$ invariant mass in the vicinity of the $\Lambda(1405)$,  [\cite{spinparity}]}
+		\end{figure}
+	\end{minipage}
+\end{frame}
 
 
 \begin{frame}{References}
