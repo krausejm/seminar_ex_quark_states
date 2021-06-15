@@ -30,3 +30,11 @@
 \usepackage{tabularx}
 \usepackage[backend=biber, style=authoryear]{biblatex}
 \addbibresource{refs.bib}
+\newcommand{\backupbegin}{
+	\newcounter{finalframe}
+	\setcounter{finalframe}{\value{framenumber}}
+}
+\newcommand{\backupend}{
+	\setcounter{framenumber}{\value{finalframe}}
+}
+\usepackage{appendixnumberbeamer}

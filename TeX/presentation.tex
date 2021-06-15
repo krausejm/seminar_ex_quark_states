@@ -22,7 +22,7 @@
 \begin{document}
 \definecolor{myWhite}{rgb}{1,1,1}
 
-\setbeamertemplate{footline}[text line]{\parbox{0.3\linewidth}{\vspace*{-9pt}\textcolor{white} \insertsection  \hfill} \parbox{0.7\linewidth}{\vspace*{-8pt} \textcolor{white}{\hfill\hspace{-3cm}\insertshorttitle \phantom{ }-- \insertshortsubtitle}  \hfill \textcolor{myWhite}{\insertpagenumber/\pageref{LastPage}}}}
+\setbeamertemplate{footline}[text line]{\parbox{0.3\linewidth}{\vspace*{-9pt}\textcolor{white} \insertsection  \hfill} \parbox{0.7\linewidth}{\vspace*{-8pt} \textcolor{white}{\hfill\hspace{-3cm}\insertshorttitle \phantom{ }-- \insertshortsubtitle}  \hfill \textcolor{myWhite}{\insertframenumber/\inserttotalframenumber}}}
 
 \addtobeamertemplate{footline}{ \makebox[0pt][l]{\hspace{-1cm}
 		\raisebox{0cm}[0pt][0pt]{\colorbox{gray!20!black}{\phantom{{\large TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT}}}}}}
@@ -87,8 +87,8 @@
 			
  			\end{itemize}
  		\vspace{.5cm}
- 		There are  many different theoretical approaches to explain this behavior\\
- 		$\to$ There is need for more experimental data!
+ 		there are  many different theoretical approaches to explain this behavior\\
+ 		$\to$ need for more experimental data!
 		\end{tcolorbox}
 
 \end{minipage}
@@ -163,7 +163,7 @@ two sets of reactions that the detector sees
 		\item $K^+p\pi^-(X)$
 		\item $K^+\pi^+\pi^-(X)$
 	\end{enumerate}
-There are many cuts that can be made that apply to both
+there are many cuts that can be made that apply to both
 	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Initial selection of particles] 
 		\begin{itemize}
 			\item particle identification using TOF counters and momentum measurements
@@ -172,7 +172,7 @@ There are many cuts that can be made that apply to both
 		\end{itemize}
 	\end{tcolorbox}
 \end{frame}
-\begin{frame}{Event selection}
+\begin{frame}{Event selection -- Particle identification}
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{tof_pi}
@@ -181,8 +181,13 @@ There are many cuts that can be made that apply to both
 \end{frame}
 
 \begin{frame}{Event selection}
-	data was divided into 10  \SI{100}{\mega\eV} in the CMS energy $W=\sqrt{s}\in[2,3]\si{\giga\eV}$ and 20 angle bins of $0.1$ in $\cos\theta^\text{CMS}_K$.
-
+	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=Binning of data] 
+	the data was divided:
+	\begin{itemize}
+		\item 10 bins in $W=\sqrt{s}$ dividing \SIrange{2}{3}{\giga\eV} in steps of \SI{100}{\mega\eV}
+		\item 20 bins in $\cos\theta_\text{CMS}^{K^+}$ dividing $-1$ to $1$ in steps of $0.1$
+	\end{itemize}
+\end{tcolorbox}
 $\to$ the following analysis was performed independently in every bin of energy and angle!
 \end{frame}
 \begin{frame}{Event selection}
@@ -235,15 +240,15 @@ $\to$ the following analysis was performed independently in every bin of energy 
 
 \begin{frame}{Measurements and analysis}
 	\begin{itemize}
-		\item Now the signal regions have been established
-		\item The true lineshape of the $\Lambda(1405)$ has to be extracted from the vast of reactions $\to$ any other contributions have to be substracted
-		\item Strategy: use of \textsc{Monte-Carlo} fits to the data, simulating the contribution of other resonances using the PDG widths and masses
+		\item now the signal regions have been established
+		\item the true lineshape of the $\Lambda(1405)$ has to be extracted from the vast of reactions $\to$ any other contributions have to be substracted
+		\item strategy: use of \textsc{Monte-Carlo} fits to the data, simulating the contribution of other resonances using the PDG widths and masses
 		
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Measurements and analysis}
-Some fit results:
+some fit results:
 \begin{figure}
 	\centering
 	\includegraphics[width=.49\linewidth]{inv_mass_res1}
@@ -254,7 +259,7 @@ Some fit results:
 \end{frame}
 
 \begin{frame}{Interpretation of the results}
-	Having substracted all unwanted reactions, one can obtain the true $\Lambda(1405)$ lineshapes:
+	having substracted all unwanted reactions, one can obtain the true $\Lambda(1405)$ lineshapes:
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth,angle=0]{CLAS_lineshape_compare}
@@ -262,7 +267,7 @@ Some fit results:
 	\end{figure}
 \end{frame}
 \begin{frame}{Interpretation of the results}
- There are in fact predictions of the lineshapes differing by decay channel \citet{nacher}. \\$\to$ main idea: not one amplitude, but two due to isospin decomposition.
+ there are in fact predictions of the lineshapes differing by decay channel \citet{nacher}. \\$\to$ main idea: not one amplitude, but two due to isospin decomposition.
 	\begin{figure}
 		\centering
 		\includegraphics[width=.58\linewidth]{nacher}
@@ -272,7 +277,7 @@ Some fit results:
 \begin{frame}{Interpretation of the results}
 	\textsc{Moriya et al.} saw two main reasons for the lineshapes differing from a simple \textsc{Breit-Wigner}:
 	\begin{enumerate}
-		\item Isospin decomposition
+		\item isospin decomposition
 		\item channel coupling between the detected $\Sigma\pi$ and $N\overline{K}$ final states
 	\end{enumerate}
 \begin{minipage}{.56\linewidth}
@@ -297,11 +302,11 @@ Some fit results:
 
 \end{frame}
 \begin{frame}{Interpretation of results}
-	Fits with two $I=1$ and one $I=0$ amplitudes lead to best agreement with measured data 
+	fits with two $I=1$ and one $I=0$ amplitudes lead to best agreement with measured data 
 	\begin{figure}
 		\centering
 		\includegraphics[width=.57\linewidth]{CLAS_lineshape_all}
-		\caption*{Data and fits for $\Sigma^a\pi^b, \{a,b\}\in\{+-,00-+\}$  for different bins in $W$. $I=0$ (solid black), narrow $I=1$ (dotted black) and wide $I=1$ (dashed black). Background in dashed red. \citet{lineshapes}}
+		\caption*{Data and fits for $\Sigma^a\pi^b, \{a,b\}\in\{+-,00-+\}$  for different bins in $W$. $I=0$ (solid black), narrow $I=1$ (dotted black) and wide $I=1$ (dashed black). Background dashed. \citet{lineshapes}}
 	\end{figure}
 	
 	
@@ -406,7 +411,7 @@ Result: data is consistent with $J^P=1/2^-$ but does in principle not rule out $
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{angular_pol}
-		\caption*{angular distribution of the polarization $Q_z$ @ $2.65<W<\SI{2.75}{\giga\eV}$ and $0.70<\cos\theta<0.80$. Red: average, blue: expectation for $P$-wave decay.  \citet{spinparity}}
+		\caption*{Angular distribution of the polarization $Q_z$ @ $2.65<W<\SI{2.75}{\giga\eV}$ and $0.70<\cos\theta<0.80$. Red: average, blue: expectation for $P$-wave decay.  \citet{spinparity}}
 	\end{figure}
 	
 \end{frame}
@@ -439,6 +444,14 @@ Result: data is consistent with $J^P=1/2^-$ but does in principle not rule out $
 \end{minipage}	
 \end{frame}
 
+
+
+
+\begin{frame}{References}
+	\printbibliography
+\end{frame}
+\appendix
+\section*{Back-Up}
 \begin{frame}{Back-up: Continuous Electron Beam Accelerator Facility (CEBAF)}
 	\begin{tcolorbox}[colback=black!10,colframe=gray!20!black,title=How can we access $\Lambda(1405)$ with this setup?]
 		\begin{itemize}
@@ -467,11 +480,5 @@ Result: data is consistent with $J^P=1/2^-$ but does in principle not rule out $
 		\end{figure}
 	\end{minipage}
 \end{frame}
-
-
-\begin{frame}{References}
-	\printbibliography
-\end{frame}
-
 
 \end{document}
