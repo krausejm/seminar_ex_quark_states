@@ -8,8 +8,8 @@
 \usepackage{braket}
 \usepackage{lmodern}
 
-\usepackage{draftwatermark}
-\setbeamercolor{background canvas}{bg=}%transparent canvas
+%\usepackage{draftwatermark}
+%\setbeamercolor{background canvas}{bg=}%transparent canvas
 
 \setbeamercolor{section in toc}{fg=NavyBlue}
 \setbeamercolor{frametitle}{fg=NavyBlue}
@@ -19,13 +19,15 @@
 \title[$\Lambda(1405)$]{Experimental studies of the $\Lambda(1405)$}
 \subtitle[Seminar physics654]{physics654 -- Seminar on exotic multi-quark states}
 \graphicspath{{figs/}}
+\setcounter{tocdepth}{2}
+
 \begin{document}
 \definecolor{myWhite}{rgb}{1,1,1}
 
 \setbeamertemplate{footline}[text line]{\parbox{0.3\linewidth}{\vspace*{-9pt}\textcolor{white} \insertsection  \hfill} \parbox{0.7\linewidth}{\vspace*{-8pt} \textcolor{white}{\hfill\hspace{-3cm}\insertshorttitle \phantom{ }-- \insertshortsubtitle}  \hfill \textcolor{myWhite}{\insertframenumber/\inserttotalframenumber}}}
 
 \addtobeamertemplate{footline}{ \makebox[0pt][l]{\hspace{-1cm}
-		\raisebox{0cm}[0pt][0pt]{\colorbox{gray!20!black}{\phantom{{\large TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT}}}}}}
+		\raisebox{0cm}[0pt][0pt]{\colorbox{black}{\phantom{{\large TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT}}}}}}
 
 \setbeamercovered{transparent}
 \setbeamertemplate{navigation symbols}{}
@@ -36,20 +38,28 @@
 \captionsetup{font=scriptsize,labelfont=scriptsize}
 
 \AtBeginSection[]
+{		\definecolor{myWhite}{rgb}{0,0,0}
+	\begin{frame}[noframenumbering]
+		\frametitle{}
+		\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+	\definecolor{myWhite}{rgb}{1,1,1}
+
+}
+\AtBeginSubsection[]
 {	
 	\definecolor{myWhite}{rgb}{0,0,0}
 	\begin{frame}[noframenumbering]
 		\frametitle{}
 		\addtocounter{page}{-1}
-		\tableofcontents[currentsection]
+		\tableofcontents[currentsection,currentsubsection]
 		
 	\end{frame}
-\definecolor{myWhite}{rgb}{1,1,1}
+	\definecolor{myWhite}{rgb}{1,1,1}
 }
 
-
 \begin{frame}[plain]
-	\setcounter{page}{0}
+	\setcounter{framenumber}{0}
 	\centering
 	{\Large \color{MidnightBlue}{Experimental studies of the $\Lambda(1405)$}}\\
 	{\href{https://www.youtube.com/watch?v=oHg5SJYRHA0}{physics654 -- Seminar on exotic multi-quark states}}
@@ -120,7 +130,7 @@
 	\begin{figure}
 			\centering
 			\includegraphics[width=\linewidth]{figs/tagger.png}
-			\caption{Overview of the CLAS detector setup, including the tagger, \citet{clas}}
+			\caption*{Overview of the CLAS detector setup, including the tagger, \citet{clas}}
 	\end{figure}
 \end{frame}
 
@@ -135,7 +145,7 @@
 
 
 \section{Line-shape measurement}
-
+\subsection{Event selection}
 
 \begin{frame}{Reaction kinematics}
 	\begin{minipage}{.63\linewidth}
@@ -236,7 +246,7 @@ $\to$ the following analysis was performed independently in every bin of energy 
 \end{frame}
 
 
-
+\subsection{Measurements and analysis}
 
 \begin{frame}{Measurements and analysis}
 	\begin{itemize}
@@ -257,7 +267,7 @@ some fit results:
 	
 \end{figure}
 \end{frame}
-
+\subsection{Interpretation of results}
 \begin{frame}{Interpretation of the results}
 	having substracted all unwanted reactions, one can obtain the true $\Lambda(1405)$ lineshapes:
 	\begin{figure}
@@ -355,7 +365,7 @@ some fit results:
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{spin_half}
-		\caption{Distribution of decay angle of the $\sigma^+$ with \textsc{Monte-Carlo} fit using flat templates \citet{spinparity}}
+		\caption*{Distribution of decay angle of the $\sigma^+$ with \textsc{Monte-Carlo} fit using flat templates \citet{spinparity}}
 	\end{figure}
 \end{frame}
 
